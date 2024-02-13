@@ -130,14 +130,24 @@ struct Home: View {
                             titleVisibility: .visible
                         ) {
                             Button("Yes, sure!", role: .destructive) {
+<<<<<<< HEAD
                                 if let itemToDelete = selectedPhoto {
                                     photoVM.deleteItem(itemToDelete)
                                 }
+=======
+                                guard let item = selectedPhoto else {return}
+                                photoVM.deleteItem(item)
+                    
+>>>>>>> 3275fb2 (repair unclean code)
                             }
                             
                             Button("Cancel", role: .cancel) {
                                 isShowingDialog = false
                             }
+<<<<<<< HEAD
+=======
+                            
+>>>>>>> 3275fb2 (repair unclean code)
                         }
                     message: {
                         Text("This action cannot be undone!")
