@@ -57,18 +57,10 @@ class PhotosViewModel: ObservableObject {
         showOptions = true
     }
     
-<<<<<<< HEAD
-    func deleteItem(_ items: Photo) {
-        if let index = photos.firstIndex(of: items) {
-            photos.remove(at: index)
-            print(items.name)
-        }
-=======
     //delete
     func deleteItem(_ items: Photo) {
         guard let index = photos.firstIndex(of: items) else { return }
             photos.remove(at: index)
             print(items.name)
->>>>>>> 3275fb2 (repair unclean code)
     }
 }
